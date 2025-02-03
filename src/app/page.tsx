@@ -1,7 +1,8 @@
 import React from "react";
+import Navbar from "../components/Navbar";
 
 const page = () => {
-  return <div className="text-white">PAGE</div>;
+  return <Navbar />;
 };
 
 export default page;
