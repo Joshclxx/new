@@ -1,6 +1,15 @@
 @import "tailwindcss/preflight";
 @tailwind utilities;
 
+@theme {
+  --spacing: 4px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,4 +26,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Text Color */
+.text-color {
+  @apply text-[#18191F];
+}
+
+/* FONTS */
+.regular-18 {
+  @apply text-[18px] font-[400];
+}
+
+.bold-18 {
+  @apply text-[18px] font-[700];
+}
+
+.bold-64 {
+  @apply text-[70px] font-[400] leading-[120%];
 }

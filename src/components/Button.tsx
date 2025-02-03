@@ -1,24 +1,28 @@
 import Image from "next/image";
 
 type ButtonProps = {
-  type: "button" | "submit";
+  variant: "primary" | "text";
   title: string;
   icon?: string;
-  variant: string;
   full?: boolean;
 };
 
-const Button = ({ type, title, icon, variant, full }: ButtonProps) => {
+const Button = ({ variant, title, icon, full }: ButtonProps) => {
   return (
     <button
-      className={`flexCenter gap-3 rounded-full border ${variant} ${
-        full && "w-full"
+      className={`flexCenter py-2 px-4 rounded-sm gap-3 ${variant} ${
+        full ? "w-full" : "w-fit"
+      } ${
+        variant === "primary"
+          ? "bg-[#4CAF4F] text-white"
+          : variant === "text"
+          ? "text-[#4CAF4F] bg-transparent"
+          : ""
       }`}
-      type={type}
+      type="button"
     >
       {icon && <Image src={icon} alt={title} width={24} height={24} />}
-
-      <label className="bold-16 whitespace-nowrap cursor-ponter">{title}</label>
+      <label className="whitespace-nowrap cursor-pointer">{title}</label>
     </button>
   );
 };
