@@ -1,10 +1,25 @@
+import Image from "next/image";
 import React from "react";
 
 const Body = () => {
   return (
-    <section className="relative w-full flex items-center justify-center py-[100px] px-[50px] bg-[#FFFFFF]">
-      <div className="text-center -mt-4">
-        <h1 className="text-[#4D4D4D] semi-bold">Hello</h1>
+    <section className="flex flex-col md:flex-row items-center justify-between py-20 px-10 bg-[#FFFFFF]">
+      <div className="md:w-120 flex justify-center md:justify-start">
+        <Image src="/image/frame.svg" alt="frame" width={391} height={407} />
+      </div>
+      <div className="md:w-1/2 text-center md:text-left">
+        <p className="text-[#4D4D4D] body-bold text-justify">
+          The unseen of spending three{" "}
+          <span className="text-[#4D4D4D]">years at Pixelgrade</span>
+        </p>
+        <p className="mt-4 text-[#717171] bold-18 text-justify">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+          justo ipsum. Sed accumsan quam vitae est varius fringilla.
+          Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+          tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+          Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+          elementum pulvinar odio.
+        </p>
       </div>
     </section>
   );

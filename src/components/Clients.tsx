@@ -55,7 +55,7 @@ const Clients = () => {
             We have been working with some Fortune 500+ clients
           </p>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-28">
+        <div className="flex flex-wrap justify-center items-center gap-20">
           {clients.map((client, index) => (
             <ImageContainer
               key={index}

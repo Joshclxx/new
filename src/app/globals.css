@@ -50,6 +50,14 @@ body {
   @apply text-[50px] font-[700];
 }
 
+.body-bold {
+  @apply text-[47px] font-[700];
+}
+
+.semi-bold-1 {
+  @apply text-[36px] font-[700];
+}
+
 /* Utilities */
 
 .flexCenter {

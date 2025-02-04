@@ -1,9 +1,9 @@
 import React from "react";
-
 import Hero from "../components/Hero";
 import Clients from "../components/Clients";
 import Community from "@/components/Community";
 import Body from "@/components/Body";
+import Achievements from "@/components/Achievements";
 
 const page = () => {
   return (
@@ -14,6 +14,7 @@ const page = () => {
         <Community />
       </div>
       <Body />
+      <Achievements />
     </div>
   );
 };

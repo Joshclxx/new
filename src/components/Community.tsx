@@ -13,8 +13,8 @@ const Community = () => {
         "Our membership management software provides full automation of membership renewals and payments",
     },
     {
-      imageSrc: "/icon/icon-2.svg",
-      imageAlt: "icon-2",
+      imageSrc: "/icon/icon-3.svg",
+      imageAlt: "icon-3",
       imageHeight: 80,
       imageWidth: 80,
       title: "National Association",
@@ -22,8 +22,8 @@ const Community = () => {
         "Our membership management software provides full automation of membership renewals and payments",
     },
     {
-      imageSrc: "/icon/icon-3.svg",
-      imageAlt: "icon-3",
+      imageSrc: "/icon/icon-2.svg",
+      imageAlt: "icon-2",
       imageHeight: 80,
       imageWidth: 80,
       title: "Clubs And Groups",
@@ -44,7 +44,7 @@ const Community = () => {
           {community.map((community, index) => (
             <div
               key={index}
-              className="flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
+              className=" semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
             >
               <ImageContainer
                 imageSrc={community.imageSrc}
