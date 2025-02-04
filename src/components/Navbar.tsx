@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { NAV_LINKS } from "./constants";
+import { NAV_LINKS } from "../../constants";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-import Button from "./src/components/Button";
+import Button from "./Button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,12 +20,12 @@ const Navbar = () => {
           <Image src="/icon/Logo.svg" alt="Logo" width={111} height={21} />
         </Link>
 
-        <ul className="hidden lg:flex text-color items-center gap-1">
+        <ul className="hidden h-full gap-1 lg:flex text-color">
           {NAV_LINKS.map((link) => (
             <li key={link.key}>
               <Link
                 href={link.href}
-                className="flex py-4 px-6 transition-colors duration-300"
+                className="flexCenter py-4 px-6 transition-colors duration-300"
               >
                 {link.label}
               </Link>

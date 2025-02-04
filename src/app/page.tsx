@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../Navbar";
+
 import Hero from "../components/Hero";
 import Clients from "../components/Clients";
 import Community from "@/components/Community";
@@ -8,7 +8,6 @@ import Body from "@/components/Body";
 const page = () => {
   return (
     <div className="bg-[#F5F7FA]">
-      <Navbar />
       <Hero />
       <div className="space-y-[-128px]">
         <Clients />

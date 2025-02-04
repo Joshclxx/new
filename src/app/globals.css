@@ -49,3 +49,9 @@ body {
 .semi-bold {
   @apply text-[50px] font-[700];
 }
+
+/* Utilities */
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
