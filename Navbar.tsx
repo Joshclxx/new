@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { NAV_LINKS } from "../../constants";
+import { NAV_LINKS } from "./constants";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import Button from "./Button";
+import Button from "./src/components/Button";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="w-full bg-[#F5F7FA] relative z-30 h-[84px] flex items-center">
       <div className="w-full mx-auto flex justify-between items-center px-10">
         <Link href="/">
-          <Image src="/Logo.svg" alt="Logo" width={111} height={21} />
+          <Image src="/icon/Logo.svg" alt="Logo" width={111} height={21} />
         </Link>
 
         <ul className="hidden lg:flex text-color items-center gap-1">
@@ -36,7 +36,7 @@ const Navbar = () => {
           <Button variant="primary" title="Sign Up" />
         </ul>
         <Image
-          src="/menu.svg"
+          src="/icon/menu.svg"
           alt="menu"
           width={32}
           height={32}

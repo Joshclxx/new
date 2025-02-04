@@ -39,9 +39,13 @@ body {
 }
 
 .bold-18 {
-  @apply text-[18px] font-[700];
+  @apply text-[18px] font-[500];
 }
 
 .bold-64 {
-  @apply text-[70px] font-[400] leading-[120%];
+  @apply text-[70px] font-[1000] leading-[120%];
+}
+
+.semi-bold {
+  @apply text-[50px] font-[700];
 }
