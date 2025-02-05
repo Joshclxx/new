@@ -41,8 +41,8 @@ const Marketing = () => {
             The Nextcent blog is the best place to read about the latest
             membership insights,
             <br />
-            trends and more. See who's joining the community, read about how our
-            community
+            trends and more. See who&lsquos joining the community, read about
+            how our community
             <br />
             are increasing their membership income and lots more.​
           </p>
