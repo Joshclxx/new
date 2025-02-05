@@ -4,7 +4,7 @@ import SectionContainer from "./SectionContainer";
 
 const Hero = () => {
   return (
-    <SectionContainer background="bg-[#F5F7FA]">
+    <SectionContainer background="bg-[#F5F7FA] relative">
       <div className="flex items-center justify-between">
         <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
           <div className="text-left">
@@ -16,6 +16,7 @@ const Hero = () => {
               Where to grow your business as a photographer: site or social
               media?
             </p>{" "}
+            <br />
             <Button variant="primary" title="Register" />
           </div>
         </div>
@@ -29,6 +30,7 @@ const Hero = () => {
             className="rounded-lg shadow-lg"
           />
         </div>
+
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
           <div className=" w-[8px] h-[8px] bg-[#4CAF4F] rounded-full text-[#4CAF4F] opacity-100"></div>
           <div className=" w-[8px] h-[8px] bg-[#4CAF4F] rounded-full text-[#4CAF4F] opacity-50"></div>

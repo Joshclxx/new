@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import SectionContainer from "./SectionContainer";
+import Button from "./Button";
 
 const Body = () => {
   return (
@@ -21,7 +22,9 @@ const Body = () => {
             tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
             Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
             elementum pulvinar odio.
-          </p>
+          </p>{" "}
+          <br />
+          <Button variant="primary" title="Learn More" />
         </div>
       </div>
     </SectionContainer>

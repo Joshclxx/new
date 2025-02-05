@@ -51,8 +51,8 @@ const Clients = () => {
     <SectionContainer background="bg-[#FFFFFF]">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
         <div className="text-center -mt-4">
-          <h1 className="text-[#4D4D4D] semi-bold">Our Clients</h1>
-          <p className="text-[#717171] bold-18">
+          <h1 className="text-title semi-bold">Our Clients</h1>
+          <p className="text-sub bold-18">
             We have been working with some Fortune 500+ clients
           </p>
         </div>

@@ -35,12 +35,12 @@ const Community = () => {
   return (
     <SectionContainer background="bg-[#FFFFFF]">
       <div className="text-center -mt-4">
-        <h1 className="text-[#4D4D4D] semi-bold">
+        <h1 className="text-title semi-bold">
           Manage your entire community
           <br />
           in a single system
         </h1>
-        <p className="text-[#717171] bold-18">Who is Nextcent suitable for?</p>
+        <p className="text-sub bold-18">Who is Nextcent suitable for?</p>
         <div className="flex flex-wrap justify-center items-center gap-14 mt-9">
           {community.map((community, index) => (
             <div

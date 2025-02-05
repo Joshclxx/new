@@ -33,6 +33,18 @@ body {
   @apply text-[#18191F];
 }
 
+.text-title {
+  @apply text-[#4D4D4D];
+}
+
+.text-sub {
+  @apply text-[#717171];
+}
+
+.text-green {
+  @apply text-[#4CAF4F];
+}
+
 /* FONTS */
 .regular-18 {
   @apply text-[18px] font-[400];
@@ -40,6 +52,10 @@ body {
 
 .bold-18 {
   @apply text-[18px] font-[500];
+}
+
+.bold-20 {
+  @apply text-[24px] font-[700];
 }
 
 .bold-64 {
