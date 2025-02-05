@@ -55,7 +55,7 @@ body {
 }
 
 .semi-bold-1 {
-  @apply text-[36px] font-[700];
+  @apply text-[40px] font-[700];
 }
 
 /* Utilities */

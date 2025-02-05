@@ -1,5 +1,6 @@
 import ImageContainer from "./ImageContainer";
 import React from "react";
+import SectionContainer from "./SectionContainer";
 
 const Community = () => {
   const community = [
@@ -32,7 +33,7 @@ const Community = () => {
     },
   ];
   return (
-    <section className="relative w-full flex items-center justify-center py-[144px] px-[50px] bg-[#FFFFFF]">
+    <SectionContainer background="bg-[#FFFFFF]">
       <div className="text-center -mt-4">
         <h1 className="text-[#4D4D4D] semi-bold">
           Manage your entire community
@@ -58,7 +59,7 @@ const Community = () => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import SectionContainer from "./SectionContainer";
 import ImageContainer from "./ImageContainer";
 
 const Achievements = () => {
@@ -38,7 +39,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center justify-center py-24 px-4 md:px-10 bg-[#F5F7FA]">
+    <SectionContainer background="bg-[#F5F7FA]">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col justify-center items-start text-left">
           <h1 className="semi-bold-1 text-[#4D4D4D]">
@@ -69,7 +70,7 @@ const Achievements = () => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

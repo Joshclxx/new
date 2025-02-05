@@ -7,7 +7,7 @@ type ImageContainerProps = {
   imageWidth: number;
   title: string;
   description: string;
-  isTextBeside?: boolean; // Prop to control text placement
+  isTextBeside?: boolean;
 };
 
 const ImageContainer: React.FC<ImageContainerProps> = ({
