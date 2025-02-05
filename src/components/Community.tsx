@@ -33,7 +33,7 @@ const Community = () => {
     },
   ];
   return (
-    <SectionContainer background="bg-[#FFFFFF]">
+    <SectionContainer background="bg-sub">
       <div className="text-center -mt-4">
         <h1 className="text-title semi-bold">
           Manage your entire community

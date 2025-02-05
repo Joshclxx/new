@@ -34,7 +34,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
     >
       <div
         className={classNames(
-          "flex items-center justify-center",
+          "relative flex items-center justify-center",
           containerHeight || "h-[120px]",
           containerWidth || "w-[120px]"
         )}
@@ -47,6 +47,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
           className="object-contain"
         />
       </div>
+
       {(title || description) && (
         <div className={isTextBeside ? "text-left" : "text-center"}>
           {title && <p className="text-title font-semibold">{title}</p>}

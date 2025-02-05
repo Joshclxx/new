@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const Body = () => {
   return (
-    <SectionContainer background="bg-[#FFFFFF]">
+    <SectionContainer background="bg-sub">
       <div className="flex items-center justify-between">
         <div className="md:w-120 flex justify-center md:justify-start">
           <Image src="/image/pana.svg" alt="pana" width={391} height={407} />

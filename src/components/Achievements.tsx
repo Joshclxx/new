@@ -39,7 +39,7 @@ const Achievements = () => {
   ];
 
   return (
-    <SectionContainer background="bg-[#F5F7FA]">
+    <SectionContainer background="bg-main">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col justify-center items-start text-left">
           <h1 className="semi-bold-1 text-[#4D4D4D]">

@@ -45,10 +45,15 @@ const Body = () => {
   ];
 
   return (
-    <SectionContainer background="bg-[#FFFFFF]">
+    <SectionContainer background="bg-sub">
       <div className="flex items-center justify-between">
         <div className="md:w-120 flex justify-center md:justify-start">
-          <Image src="/image/frame.svg" alt="frame" width={391} height={407} />
+          <Image
+            src="/image/customer.svg"
+            alt="customer"
+            width={500}
+            height={500}
+          />
         </div>
         <div className="md:w-1/2 text-center md:text-left">
           <p className="text-[#4D4D4D] body-bold text-justify">

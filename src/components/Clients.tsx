@@ -48,7 +48,7 @@ const Clients = () => {
     },
   ];
   return (
-    <SectionContainer background="bg-[#FFFFFF]">
+    <SectionContainer background="bg-sub">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
         <div className="text-center -mt-4">
           <h1 className="text-title semi-bold">Our Clients</h1>

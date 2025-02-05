@@ -84,3 +84,7 @@ body {
 .bg-main {
   @apply bg-[#F5F7FA];
 }
+
+.bg-sub {
+  @apply bg-[#FFFFFF];
+}
