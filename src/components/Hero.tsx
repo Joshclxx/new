@@ -4,7 +4,7 @@ import SectionContainer from "./SectionContainer";
 
 const Hero = () => {
   return (
-    <SectionContainer background="bg-[#F5F7FA] relative">
+    <SectionContainer background="bg-main relative">
       <div className="flex items-center justify-between">
         <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center">
           <div className="text-left">

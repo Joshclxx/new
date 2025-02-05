@@ -10,11 +10,11 @@ const SectionContainer = ({ background, children }: Props) => {
   return (
     <section
       className={classNames(
-        "flex flex-col items-center justify-center py-50 px-22 md:px-10 max-w-[1600px] mx-auto",
+        "flex flex-col items-center justify-center py-50 px-22 md:px-10 ",
         background
       )}
     >
-      {children}
+      <div className="max-w-[1600px] mx-auto">{children}</div>
     </section>
   );
 };

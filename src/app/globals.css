@@ -79,3 +79,8 @@ body {
 .flexCenter {
   @apply flex items-center justify-center;
 }
+
+/* Background */
+.bg-main {
+  @apply bg-[#F5F7FA];
+}
