@@ -7,6 +7,7 @@ import Achievements from "@/components/Achievements";
 import Tumbnail from "@/components/Tumbnail";
 import Customer from "@/components/Customer";
 import Marketing from "../components/Marketing";
+import Features from "@/components/Features";
 
 const page = () => {
   return (
@@ -21,6 +22,7 @@ const page = () => {
       <Tumbnail />
       <Customer />
       <Marketing />
+      <Features />
     </div>
   );
 };

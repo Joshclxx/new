@@ -10,7 +10,7 @@ const SectionContainer = ({ background, children }: Props) => {
   return (
     <section
       className={classNames(
-        "flex flex-col items-center justify-center py-50 px-22 md:px-10 ",
+        "flex flex-col items-center justify-center md:px-10 ",
         background
       )}
     >

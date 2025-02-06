@@ -5,10 +5,10 @@ import Button from "./Button";
 
 const Body = () => {
   return (
-    <SectionContainer background="bg-sub">
+    <SectionContainer background="bg-sub py-[22.5px] px-[40px]">
       <div className="flex items-center justify-between">
         <div className="md:w-120 flex justify-center md:justify-start">
-          <Image src="/image/frame.svg" alt="frame" width={391} height={407} />
+          <Image src="/image/frame.svg" alt="frame" width={921} height={937} />
         </div>
         <div className="md:w-1/2 text-center md:text-left">
           <p className="text-[#4D4D4D] body-bold text-justify">

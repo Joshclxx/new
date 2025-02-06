@@ -48,9 +48,9 @@ const Clients = () => {
     },
   ];
   return (
-    <SectionContainer background="bg-sub">
+    <SectionContainer background="bg-sub py-48 px-64">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
-        <div className="text-center -mt-4">
+        <div className="text-center -mt-48">
           <h1 className="text-title semi-bold">Our Clients</h1>
           <p className="text-sub bold-18">
             We have been working with some Fortune 500+ clients

@@ -33,7 +33,7 @@ const Community = () => {
     },
   ];
   return (
-    <SectionContainer background="bg-sub">
+    <SectionContainer background="bg-sub py-[20.5px] px-[40px]">
       <div className="text-center -mt-4">
         <h1 className="text-title semi-bold">
           Manage your entire community
@@ -45,7 +45,7 @@ const Community = () => {
           {community.map((community, index) => (
             <div
               key={index}
-              className=" semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
+              className="semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
             >
               <ImageContainer
                 imageSrc={community.imageSrc}

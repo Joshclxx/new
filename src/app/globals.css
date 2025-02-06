@@ -59,7 +59,7 @@ body {
 }
 
 .bold-64 {
-  @apply text-[70px] font-[1000] leading-[120%];
+  @apply text-[64px] font-[1000] leading-[120%];
 }
 
 .semi-bold {

@@ -39,7 +39,7 @@ const Achievements = () => {
   ];
 
   return (
-    <SectionContainer background="bg-main">
+    <SectionContainer background="bg-main py-[10.5px] px-[40px]">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col justify-center items-start text-left">
           <h1 className="semi-bold-1 text-[#4D4D4D]">

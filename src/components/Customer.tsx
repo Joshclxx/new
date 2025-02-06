@@ -45,21 +45,17 @@ const Body = () => {
   ];
 
   return (
-    <SectionContainer background="bg-sub">
+    <SectionContainer background="bg-main py-[8.5px] px-[40px]">
       <div className="flex items-center justify-between">
         <div className="md:w-120 flex justify-center md:justify-start">
           <Image
             src="/image/customer.svg"
             alt="customer"
-            width={500}
-            height={500}
+            width={450}
+            height={450}
           />
         </div>
         <div className="md:w-1/2 text-center md:text-left">
-          <p className="text-[#4D4D4D] body-bold text-justify">
-            The unseen of spending three{" "}
-            <span className="text-[#4D4D4D]">years at Pixelgrade</span>
-          </p>
           <p className="mt-4 text-sub bold-18 text-justify">
             Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
             lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu

@@ -10,7 +10,6 @@ const Marketing = () => {
       imageAlt: "market-1",
       imageHeight: 364,
       imageWidth: 468,
-
       description: "Learn how to create efficient processes with our platform.",
     },
     {
@@ -18,7 +17,6 @@ const Marketing = () => {
       imageAlt: "market-2",
       imageHeight: 364,
       imageWidth: 468,
-
       description:
         "What are your safeguarding responsibilities and how can you manage them?",
     },
@@ -27,13 +25,12 @@ const Marketing = () => {
       imageAlt: "market-3",
       imageHeight: 364,
       imageWidth: 468,
-
       description: "Revamping the Membership Model with Triathlon Australia",
     },
   ];
 
   return (
-    <SectionContainer background="bg-sub">
+    <SectionContainer background="bg-sub py-[33.5px] px-[40px]">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
         <div className="text-center -mt-4">
           <h1 className="text-title semi-bold">Caring is the new marketing</h1>
@@ -41,7 +38,7 @@ const Marketing = () => {
             The Nextcent blog is the best place to read about the latest
             membership insights,
             <br />
-            trends and more. See who&lsquos joining the community, read about
+            trends and more. See who&lsquoclas joining the community, read about
             how our community
             <br />
             are increasing their membership income and lots more.​
