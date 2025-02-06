@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-[#F5F7FA] relative z-30 h-[84px] flex items-center">
+    <nav className="w-full bg-sub relative z-30 h-[84px] flex items-center">
       <div className="w-full mx-auto flex justify-between items-center px-10">
         <Link href="/">
           <Image src="/icon/Logo.svg" alt="Logo" width={111} height={21} />

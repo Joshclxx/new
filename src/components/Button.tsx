@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 type ButtonProps = {
-  variant: "primary" | "text";
+  variant: "primary" | "secondary" | "text";
   title: string;
   icon?: string;
   full?: boolean;
@@ -15,6 +15,8 @@ const Button = ({ variant, title, icon, full }: ButtonProps) => {
       } ${
         variant === "primary"
           ? "bg-[#4CAF4F] text-white"
+          : variant === "secondary"
+          ? "bg-[#a0a1a3] text-[#fefefe]"
           : variant === "text"
           ? "text-[#4CAF4F] bg-transparent"
           : ""
