@@ -1,6 +1,6 @@
 import React from "react";
 import SectionContainer from "./SectionContainer";
-import Button from "../../new/src/components/Button";
+import Button from "./Button";
 
 const Features = () => {
   return (
