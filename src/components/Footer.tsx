@@ -62,7 +62,7 @@ const Footer = () => {
                 {social.map((social, index) => (
                   <div
                     key={index}
-                    className="flex flex-center justify-center w-[55px] h-[55px] rounded-lg shadow-lg"
+                    className="animated-SocIcon flex justify-center items-center w-[55px] h-[55px] rounded-lg shadow-lg"
                   >
                     <ImageContainer
                       key={index}

@@ -28,7 +28,7 @@ const Hero = () => {
           variants={columnVariants}
           initial="hidden"
           whileInView="visible"
-          transition={{ duration: 0.9, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
           <div className="flex-1 max-w-[600px] text-center md:text-left">
             <h1 className="bold-64 md:bold-64 text-[#4D4D4D]">
@@ -46,19 +46,43 @@ const Hero = () => {
         </motion.div>
 
         <div className="flex-1 flex justify-center md:justify-end">
-          {heroes.map((hero, index) => (
-            <ImageContainer
-              key={index}
-              imageSrc={hero.imageSrc}
-              imageAlt={hero.imageAlt}
-              imageHeight={hero.imageHeight}
-              imageWidth={hero.imageHeight}
-              title=""
-              description=""
-              containerHeight="h-[440px]"
-              containerWidth="w-[440px]"
-            />
-          ))}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.4,
+                },
+              },
+            }}
+            className="flex items-center gap-[28px] relative"
+          >
+            {heroes.map((hero, index) => (
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
+                }}
+                key={index}
+                className="relative flex flex-center justify-center"
+              >
+                <ImageContainer
+                  key={index}
+                  imageSrc={hero.imageSrc}
+                  imageAlt={hero.imageAlt}
+                  imageHeight={hero.imageHeight}
+                  imageWidth={hero.imageHeight}
+                  title=""
+                  description=""
+                  containerHeight="h-[440px]"
+                  containerWidth="w-[440px]"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
 

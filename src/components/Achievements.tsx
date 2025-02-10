@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import SectionContainer from "./SectionContainer";
 import ImageContainer from "./ImageContainer";
+import { motion } from "framer-motion";
 
 const Achievements = () => {
   const achievements = [
@@ -38,6 +41,21 @@ const Achievements = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <SectionContainer background="bg-main py-[10.5px] px-[40px]">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -51,9 +69,15 @@ const Achievements = () => {
             We reached here with our hard work and dedication
           </p>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-10">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={containerVariants}
+          className="mt-8 grid grid-cols-2 gap-10"
+        >
           {achievements.map((achievement, index) => (
-            <div
+            <motion.div
+              variants={itemVariants}
               key={index}
               className="flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-full"
             >
@@ -66,9 +90,9 @@ const Achievements = () => {
                 description={achievement.description}
                 isTextBeside={true}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </SectionContainer>
   );

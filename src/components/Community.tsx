@@ -36,6 +36,21 @@ const Community = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <SectionContainer background="bg-sub py-[20.5px] px-[40px]">
       <div className="text-center -mt-4">
@@ -45,40 +60,44 @@ const Community = () => {
           in a single system
         </h1>
         <p className="text-sub bold-18">Who is Nextcent suitable for?</p>
-        <motion.div
-          className="flex flex-wrap justify-center items-center gap-14 mt-9"
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.4,
+        <div className="flex flex-wrap justify-center items-center gap-14 mt-9">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.5,
+                },
               },
-            },
-          }}
-        >
-          {community.map((community, index) => (
-            <motion.div
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1 },
-              }}
-              key={index}
-              className="semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
-            >
-              <ImageContainer
-                imageSrc={community.imageSrc}
-                imageAlt={community.imageAlt}
-                imageHeight={community.imageHeight}
-                imageWidth={community.imageWidth}
-                title={community.title}
-                description={community.description}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+            }}
+            className="flex flex-row mt-8 gap-10"
+          >
+            {community.map((community, index) => (
+              <motion.div
+                className="semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
+                }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                key={index}
+              >
+                <ImageContainer
+                  imageSrc={community.imageSrc}
+                  imageAlt={community.imageAlt}
+                  imageHeight={community.imageHeight}
+                  imageWidth={community.imageWidth}
+                  title={community.title}
+                  description={community.description}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </SectionContainer>
   );

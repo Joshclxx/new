@@ -1,8 +1,10 @@
-import Image from "next/image";
+"use client";
+
 import React from "react";
 import SectionContainer from "./SectionContainer";
 import Button from "./Button";
 import ImageContainer from "./ImageContainer";
+import { motion } from "framer-motion";
 
 const Body = () => {
   const customers = [
@@ -77,21 +79,45 @@ const Body = () => {
             British Dragon Boat Racing Association
           </p>
           <br />
-          <div className="flex items-center flex-nowrap">
+          <div className="flex items-center flex-nowrap gap-1">
             <div className="flex items-center gap-[2px]">
-              {customers.map((customer, index) => (
-                <ImageContainer
-                  key={index}
-                  imageSrc={customer.imageSrc}
-                  imageAlt={customer.imageAlt}
-                  imageHeight={customer.imageHeight}
-                  imageWidth={customer.imageWidth}
-                  title=""
-                  description=""
-                  containerHeight="h-[90px]"
-                  containerWidth="w-[90px]"
-                />
-              ))}
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.4,
+                    },
+                  },
+                }}
+                className="flex items-center gap-[28px] relative"
+              >
+                {customers.map((customer, index) => (
+                  <motion.div
+                    variants={{
+                      hidden: { opacity: 0 },
+                      visible: { opacity: 1 },
+                    }}
+                    key={index}
+                    className="relative flex flex-center justify-center"
+                  >
+                    <ImageContainer
+                      key={index}
+                      imageSrc={customer.imageSrc}
+                      imageAlt={customer.imageAlt}
+                      imageHeight={customer.imageHeight}
+                      imageWidth={customer.imageWidth}
+                      title=""
+                      description=""
+                      containerHeight="h-[90px]"
+                      containerWidth="w-[90px]"
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
             <Button
               variant="text"

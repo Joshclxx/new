@@ -62,13 +62,13 @@ const Clients = () => {
         <div className="flex flex-wrap justify-center items-center gap-20">
           <motion.div
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
             variants={{
               hidden: { opacity: 0 },
               visible: {
                 opacity: 1,
                 transition: {
-                  staggerChildren: 0.5,
+                  staggerChildren: 0.3,
                 },
               },
             }}
