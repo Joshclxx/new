@@ -45,14 +45,18 @@ const Body = () => {
   ];
 
   return (
-    <SectionContainer background="bg-main py-[8.5px] px-[40px]">
+    <SectionContainer background="bg-main py-16 px-4 md:py-24 md:px-12">
       <div className="flex items-center justify-between">
         <div className="md:w-120 flex justify-center md:justify-start">
-          <Image
-            src="/image/customer.svg"
-            alt="customer"
-            width={450}
-            height={450}
+          <ImageContainer
+            imageSrc="/image/customer.svg"
+            imageAlt="customer"
+            imageHeight={450}
+            imageWidth={450}
+            title=""
+            description=""
+            containerHeight="h-[450px]"
+            containerWidth="w-[450px]"
           />
         </div>
         <div className="md:w-1/2 text-center md:text-left">

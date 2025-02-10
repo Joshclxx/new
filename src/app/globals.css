@@ -104,3 +104,32 @@ body {
 .bg-footer {
   @apply bg-[#263238];
 }
+
+/* ImageContainer */
+.image-container {
+  @apply flex flex-col items-center p-5 transform hover:scale-105 transition-transform duration-300 cursor-pointer h-full w-full col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3;
+}
+
+/* Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 6.5s steps(40, end), blink-caret 0.75s;
+}

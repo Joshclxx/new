@@ -13,22 +13,15 @@ const page = () => {
   return (
     <div className="bg-sub">
       <Hero />
-
       <div className="space-y-[-128px] p-5">
         <Clients />
         <Community />
       </div>
-
       <Body />
-
       <Achievements />
-
       <Tumbnail />
-
       <Customer />
-
       <Marketing />
-
       <Features />
     </div>
   );

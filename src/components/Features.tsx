@@ -7,7 +7,7 @@ const Features = () => {
     <SectionContainer background="bg-main py-[20.5px] px-[40px]">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center mt-4 mb-4">
         <div className="flex flex-col text-center items-center justify-center">
-          <h1 className="text-title bold-64">
+          <h1 className="text-title bold-64 typewriter">
             Pellentesque suscipit
             <br />
             fringilla libero eu.

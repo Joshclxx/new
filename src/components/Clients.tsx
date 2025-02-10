@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import ImageContainer from "./ImageContainer";
 import SectionContainer from "./SectionContainer";
+import { motion } from "framer-motion";
 
 const Clients = () => {
   const clients = [
@@ -51,23 +54,47 @@ const Clients = () => {
     <SectionContainer background="bg-sub py-48 px-64">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
         <div className="text-center -mt-48">
-          <h1 className="text-title semi-bold">Our Clients</h1>
+          <h1 className="text-title semi-bold mb-2 typewriter">Our Clients</h1>
           <p className="text-sub bold-18">
             We have been working with some Fortune 500+ clients
           </p>
         </div>
         <div className="flex flex-wrap justify-center items-center gap-20">
-          {clients.map((client, index) => (
-            <ImageContainer
-              key={index}
-              imageSrc={client.imageSrc}
-              imageAlt={client.imageAlt}
-              imageHeight={client.imageHeight}
-              imageWidth={client.imageWidth}
-              title={""}
-              description={""}
-            />
-          ))}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.5,
+                },
+              },
+            }}
+            className="flex items-center gap-[28px] relative"
+          >
+            {clients.map((client, index) => (
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
+                }}
+                key={index}
+                className="relative flex flex-center justify-center"
+              >
+                <ImageContainer
+                  key={index}
+                  imageSrc={client.imageSrc}
+                  imageAlt={client.imageAlt}
+                  imageHeight={client.imageHeight}
+                  imageWidth={client.imageWidth}
+                  title={""}
+                  description={""}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </SectionContainer>

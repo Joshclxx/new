@@ -1,6 +1,9 @@
+"use client";
+
 import ImageContainer from "./ImageContainer";
 import React from "react";
 import SectionContainer from "./SectionContainer";
+import { motion } from "framer-motion";
 
 const Community = () => {
   const community = [
@@ -32,6 +35,7 @@ const Community = () => {
         "Our membership management software provides full automation of membership renewals and payments",
     },
   ];
+
   return (
     <SectionContainer background="bg-sub py-[20.5px] px-[40px]">
       <div className="text-center -mt-4">
@@ -41,9 +45,26 @@ const Community = () => {
           in a single system
         </h1>
         <p className="text-sub bold-18">Who is Nextcent suitable for?</p>
-        <div className="flex flex-wrap justify-center items-center gap-14 mt-9">
+        <motion.div
+          className="flex flex-wrap justify-center items-center gap-14 mt-9"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.4,
+              },
+            },
+          }}
+        >
           {community.map((community, index) => (
-            <div
+            <motion.div
+              variants={{
+                hidden: { opacity: 0 },
+                visible: { opacity: 1 },
+              }}
               key={index}
               className="semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
             >
@@ -55,9 +76,9 @@ const Community = () => {
                 title={community.title}
                 description={community.description}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </SectionContainer>
   );

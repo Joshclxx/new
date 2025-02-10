@@ -1,3 +1,4 @@
+import * as motion from "motion/react-client";
 import React from "react";
 import SectionContainer from "./SectionContainer";
 import ImageContainer from "./ImageContainer";
@@ -33,7 +34,9 @@ const Marketing = () => {
     <SectionContainer background="bg-sub py-[33.5px] px-[40px]">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
         <div className="text-center -mt-4">
-          <h1 className="text-title semi-bold">Caring is the new marketing</h1>
+          <h1 className="text-title semi-bold typewriter">
+            Caring is the new marketing
+          </h1>
           <p className="text-sub bold-18">
             The Nextcent blog is the best place to read about the latest
             membership insights,
@@ -45,9 +48,26 @@ const Marketing = () => {
           </p>
         </div>
         <div className="relative flex items-center flex-nowrap">
-          <div className="flex items-center gap-[28px] relative">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.4,
+                },
+              },
+            }}
+            className="flex items-center gap-[28px] relative"
+          >
             {markets.map((market, index) => (
-              <div
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 },
+                }}
                 key={index}
                 className="relative flex flex-center justify-center"
               >
@@ -74,9 +94,9 @@ const Marketing = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </SectionContainer>
