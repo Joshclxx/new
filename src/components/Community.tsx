@@ -36,31 +36,18 @@ const Community = () => {
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
-    <SectionContainer background="bg-sub py-[20.5px] px-[40px]">
+    <SectionContainer background="bg-sub py-6 sm:py-12 px-4 sm:px-8 md:px-16">
       <div className="text-center -mt-4">
-        <h1 className="text-title semi-bold">
+        {/* title */}
+        <h1 className="text-[24px] sm:text-[50px] text-title semi-bold">
           Manage your entire community
           <br />
           in a single system
         </h1>
         <p className="text-sub bold-18">Who is Nextcent suitable for?</p>
-        <div className="flex flex-wrap justify-center items-center gap-14 mt-9">
+
+        <div className="mt-9">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -73,11 +60,11 @@ const Community = () => {
                 },
               },
             }}
-            className="flex flex-row mt-8 gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 mt-8"
           >
             {community.map((community, index) => (
               <motion.div
-                className="semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-[400px]"
+                className="semi-bold flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-full sm:w-[320px] md:w-[400px]"
                 variants={{
                   hidden: { opacity: 0 },
                   visible: { opacity: 1 },

@@ -36,7 +36,7 @@ const Marketing = () => {
   ];
 
   return (
-    <SectionContainer background="bg-sub py-[33.5px] px-[40px] mb-6">
+    <SectionContainer background="bg-sub py-[33.5px] px-5 sm:px-[40px] mb-6">
       <div className="max-w-6xl w-full grid grid-cols-1 gap-10 items-center justify-center">
         <div className="text-center -mt-4">
           <h1 className="text-title semi-bold typewriter">
@@ -45,14 +45,14 @@ const Marketing = () => {
           <p className="text-sub bold-18">
             The Nextcent blog is the best place to read about the latest
             membership insights,
-            <br />
+            <br className="hidden sm:block" />
             trends and more. See who&lsquoclas joining the community, read about
             how our community
-            <br />
+            <br className="hidden sm:block" />
             are increasing their membership income and lots more.​
           </p>
         </div>
-        <div className="relative flex items-center flex-nowrap">
+        <div className="relative flex flex-col sm:flex-row items-center sm:items-start flex-nowrap sm:flex-wrap gap-6 sm:gap-[28px]">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -65,7 +65,7 @@ const Marketing = () => {
                 },
               },
             }}
-            className="flex items-center gap-[28px] relative"
+            className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-[28px]"
           >
             {markets.map((market, index) => (
               <motion.div
@@ -73,8 +73,10 @@ const Marketing = () => {
                   hidden: { opacity: 0 },
                   visible: { opacity: 1 },
                 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
                 key={index}
-                className="relative flex flex-center justify-center"
+                className="relative flex flex-col items-center sm:flex-center sm:justify-center"
               >
                 <ImageContainer
                   imageSrc={market.imageSrc}
@@ -83,11 +85,12 @@ const Marketing = () => {
                   imageWidth={market.imageWidth}
                   title=""
                   description=""
-                  containerHeight="h-[364px]"
-                  containerWidth="w-[468px]"
+                  containerHeight="h-auto sm:h-[364px]"
+                  containerWidth="w-full sm:w-[468px]"
+                  className="inline-block h-10 w-10 rounded-full"
                 />
 
-                <div className="absolute bottom-[-8%] flex items-center justify-center w-[80%] h-[40%] bg-main py-4 px-8 rounded-lg shadow-2xl text-sub">
+                <div className="absolute bottom-[-8%] sm:bottom-[-10%] flex items-center justify-center w-[90%] sm:w-[80%] h-auto bg-main py-4 px-6 sm:px-8 rounded-lg shadow-2xl text-sub">
                   <div className="text-center">
                     <p className="bold-18">{market.description}</p>
                     <div className="flex flex-center items-center justify-center">

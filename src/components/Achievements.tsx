@@ -55,11 +55,10 @@ const Achievements = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
-
   return (
-    <SectionContainer background="bg-main py-[10.5px] px-[40px]">
-      <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-col justify-center items-start text-left">
+    <SectionContainer background="bg-main py-[10.5px] px-5 sm:px-[40px]">
+      <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left">
           <h1 className="semi-bold-1 text-[#4D4D4D]">
             Helping a local
             <br />
@@ -73,23 +72,24 @@ const Achievements = () => {
           initial="hidden"
           whileInView="visible"
           variants={containerVariants}
-          className="mt-8 grid grid-cols-2 gap-10"
+          className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10"
         >
           {achievements.map((achievement, index) => (
             <motion.div
               variants={itemVariants}
               key={index}
-              className="flex flex-col items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-full"
+              className="flex flex-col sm:flex-row items-center rounded-lg p-6 bg-[#F5F7FA] shadow-lg w-full sm:w-auto"
             >
               <ImageContainer
                 imageSrc={achievement.imageSrc}
                 imageAlt={achievement.imageAlt}
                 imageHeight={achievement.imageHeight}
                 imageWidth={achievement.imageWidth}
-                title={achievement.title}
-                description={achievement.description}
-                isTextBeside={true}
               />
+              <div className="mt-3 sm:mt-0 sm:ml-4 text-center sm:text-left">
+                <h2 className="bold-18 text-[#18191F]">{achievement.title}</h2>
+                <p className="text-[#4D4D4D]">{achievement.description}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

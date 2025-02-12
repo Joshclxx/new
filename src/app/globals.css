@@ -107,7 +107,7 @@ body {
 
 /* ImageContainer */
 .image-container {
-  @apply flex flex-col items-center p-5 transform hover:scale-105 transition-transform duration-300 cursor-pointer h-full w-full col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3;
+  @apply flex flex-col items-center p-5 transform hover:scale-105 transition-transform duration-300 cursor-pointer h-full w-full col-span-12  md:col-span-4 lg:col-span-3;
 }
 
 /* Animation */
@@ -132,4 +132,26 @@ body {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 6.5s steps(40, end), blink-caret 0.75s;
+}
+
+/* Icon Animation */
+.animated-SocIcon {
+  @apply transition-all duration-300;
+}
+
+.animated-SocIcon:hover {
+  @apply scale-110;
+}
+
+.animated-SocIcon img {
+  @apply transition-all duration-100;
+}
+
+.animated-SocIcon:hover img {
+  @apply opacity-80;
+}
+
+/* Responsiveness */
+.padding-container {
+  @apply px-6 lg:px-20 3xl:px-0;
 }

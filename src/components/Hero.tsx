@@ -21,10 +21,10 @@ const columnVariants = {
 
 const Hero = () => {
   return (
-    <SectionContainer background="bg-main relative py-24 px-6 md:py-48 md:px-22">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+    <SectionContainer background="bg-main max-container padding-container  flex flex-col items-center gap-16 py-10 pb-32 md:gap-28 lg:py-20 xl:flex-row">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-120">
         <motion.div
-          className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center"
+          className="w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start"
           variants={columnVariants}
           initial="hidden"
           whileInView="visible"
@@ -39,13 +39,13 @@ const Hero = () => {
               Where to grow your business as a photographer: site or social
               media?
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center md:justify-start w-full">
               <Button variant="primary" title="Register" />
             </div>
           </div>
         </motion.div>
 
-        <div className="flex-1 flex justify-center md:justify-end">
+        <div className="flex-1 hidden md:flex justify-center md:justify-end">
           <motion.div
             initial="hidden"
             whileInView="visible"

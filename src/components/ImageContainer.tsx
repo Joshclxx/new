@@ -16,6 +16,7 @@ type ImageContainerProps = {
   containerHeight?: string;
   containerWidth?: string;
   animationDirection?: "left" | "right";
+  className?: string;
 };
 
 const ImageContainer: React.FC<ImageContainerProps> = ({
@@ -29,6 +30,7 @@ const ImageContainer: React.FC<ImageContainerProps> = ({
   containerHeight,
   containerWidth,
   animationDirection = "right",
+  className,
 }) => {
   const fly = animationDirection === "left" ? -50 : 50;
 
